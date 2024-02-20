@@ -8,6 +8,7 @@ from models.state import State
 from models.city import City
 from models.user import User
 from models.place import Place
+from models.review import Review
 
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, scoped_session
@@ -24,7 +25,7 @@ class DBStorage:
 
     __engine = None
     __session = None
-    __classes = [State, City, User, Place]
+    __classes = [State, City, User, Place, Review]
 
     def __init__(self):
         """ Instantiates the DBStorage """
@@ -62,7 +63,7 @@ class DBStorage:
         DBStorage.__session.commit()
 
     def delete(self, obj=None):
-        """ delete from the current database session obj if not None """
+        """Delete from the current database session obj if not none"""
         DBStorage.__session.delete(obj)
 
     def reload(self):
