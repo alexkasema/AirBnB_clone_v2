@@ -36,7 +36,7 @@ def do_deploy(archive_path):
         symb_link = '/data/web_static/current'
 
         put(archive, '/tmp/')
-        run('sudo mkdir -p {}/').format(path)
+        run('sudo mkdir -p {}/'.format(path))
         run('sudo tar -xzf /tmp/{} -C {}'.format(archive, path))
         run('sudo rm /tmp/{}'.format(archive))
         run('sudo mv {}/web_static/* {}'.format(path, path))
