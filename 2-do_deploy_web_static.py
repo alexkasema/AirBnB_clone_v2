@@ -26,6 +26,7 @@ def do_pack():
     else:
         return None
 
+
 def do_deploy(archive_path):
     """
     Distributes an archive to your web servers
@@ -35,7 +36,7 @@ def do_deploy(archive_path):
         path = '/data/web_static/releases/{}'.format(archive.strip('.tgz'))
         symb_link = '/data/web_static/current'
 
-        put(archive, '/tmp/')
+        put(archive_path, '/tmp')
         run('sudo mkdir -p {}/'.format(path))
         run('sudo tar -xzf /tmp/{} -C {}'.format(archive, path))
         run('sudo rm /tmp/{}'.format(archive))
@@ -45,7 +46,5 @@ def do_deploy(archive_path):
         run('sudo ln -s {} {}'.format(path, symb_link))
         print('New version deployed!')
         return True
-    except:
+    except Exception:
         return False
-
-
