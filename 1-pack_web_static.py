@@ -2,15 +2,8 @@
 
 """ Compress before sending """
 
-from fabric.api import env, local
+from fabric.api import local
 from datetime import datetime
-
-
-env.user = 'ubuntu'
-env.hosts = [
-    '100.26.223.120',
-    '100.26.18.64'
-]
 
 
 def do_pack():
@@ -25,4 +18,4 @@ def do_pack():
     if created_archive:
         return created_archive
     else:
-        None
+        return None
