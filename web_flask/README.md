@@ -10,3 +10,5 @@ Routes:
 * You must use the option strict_slashes=False in your route definition
 ## 1-hbnb_route.py
 A script that starts a Flask web application: /hbnb: display “HBNB”
+## 2-c_route.py
+Route /c/<text>: display “C ” followed by the value of the text variable (replace underscore _ symbols with a space.
