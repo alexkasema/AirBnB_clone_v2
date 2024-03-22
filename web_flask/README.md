@@ -12,3 +12,6 @@ Routes:
 A script that starts a Flask web application: /hbnb: display “HBNB”
 ## 2-c_route.py
 Route /c/<text>: display “C ” followed by the value of the text variable (replace underscore _ symbols with a space.
+## 3-python_route.py
+Route /python/<text>: display “Python ”, followed by the value of the text variable (replace underscore _ symbols with a space )
+The default value of text is “is cool”.
