@@ -17,3 +17,6 @@ Route /python/<text>: display “Python ”, followed by the value of the text v
 The default value of text is “is cool”.
 ## 4-number_route.py
 Route /number/<n>: display “n is a number” only if n is an integer.
+## 5-number_template.py, templates/5-number.html
+Route /number_template/<n>: display a HTML page only if n is an integer:
+H1 tag: “Number: n” inside the tag BODY
