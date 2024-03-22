@@ -15,3 +15,5 @@ Route /c/<text>: display “C ” followed by the value of the text variable (re
 ## 3-python_route.py
 Route /python/<text>: display “Python ”, followed by the value of the text variable (replace underscore _ symbols with a space )
 The default value of text is “is cool”.
+## 4-number_route.py
+Route /number/<n>: display “n is a number” only if n is an integer.
